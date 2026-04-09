@@ -27,3 +27,15 @@ user: Tell me info about xyz event!
 Luna: xyz fuckass event is happening in WHATEVER timestamp
 (citation to the event LINK or PDF.)
 
+# OPTIMIZATION SHIT
+## LAYERED RETRIEVAL STRATEGY
+// Use juit_facts.json first for critical facts, then prioritized RAG, then full archive.
+## QUERY OPTIMIZATIONS
+// Query Rewriting/Expansion, Intent Classification, HyDE for better search.
+## RETRIEVAL & RANKING OPTIMIZATIONS
+// Hybrid Search (keyword + vector), Re-ranking retrieved chunks, Parent Document Retrieval.
+## DATA PROCESSING OPTIMIZATIONS
+// Metadata Filtering for efficient search, Smart Chunking.
+## LLM GENERATION OPTIMIZATIONS
+// Caching common answers, Streaming responses.
+
