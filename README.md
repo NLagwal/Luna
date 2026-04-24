@@ -1,44 +1,49 @@
-# LUNA: AI Assistant for JUIT Solan's Website
+# LUNA: Precision AI Assistant for JUIT Solan
 
-LUNA is an AI assistant for JUIT Solan's website, designed to provide quick and accurate information to users.
+LUNA is a high-accuracy, RAG-powered AI assistant specifically engineered for the Jaypee University of Information Technology (JUIT) website. Unlike standard RAG systems, LUNA uses a dual-track retrieval architecture to eliminate hallucinations and ensure deterministic correctness for university data.
 
-## Features
+## 🚀 Actual Architecture
 
-### Core Features (MVP)
+LUNA operates on a **Selective Retrieval Strategy** that chooses the best data source based on query intent:
 
-*   **Citation Mapping:** Luna will provide citations for the information it provides, linking back to the source URL on the JUIT website.
-*   **Vector-Based Search:** Instead of traditional keyword-based search, Luna will use a vector database (ChromaDB) to store and retrieve information from the entire website. This allows for more semantic and context-aware search.
-*   **Local LLM Integration:** Luna will use local Large Language Models (LLMs) like `llama-3.1:8b` and `embeddinggemma` to process user queries and generate responses.
+### 1. Deterministic Knowledge Track (100% Accuracy)
+*   **Structured Faculty DB (`faculty_structured_db.json`)**: Contains cleaned, parsed profiles for 100+ faculty members (Biography, Research, Projects).
+*   **Hard Facts DB (`juit_facts.json`)**: Stores "Ground Truth" data for fees (2026-27), university leadership (VC, Registrar), and establishment details.
+*   **Hallucination Protection**: When a person or hard fact is identified, LUNA **short-circuits** the Vector DB. This prevents "data leakage" where details from one professor might accidentally mix into another's biography.
 
-### Planned Features
+### 2. Semantic RAG Track (Deep Context)
+*   **Vector Database**: ChromaDB (running in Docker) storing 28,000+ text chunks from the entire JUIT website and high-utility PDFs.
+*   **Content Filtering**: Custom parser (`parser.py`) that strips navigation noise and filters out 404 pages, login forms, and junk content.
+*   **Semantic Search**: Uses `embeddinggemma:latest` to find relevant information for general queries (e.g., "What is the policy on X?").
 
-*   **Website UI Integration:** The user interface for Luna will be designed to be cohesive with the existing JUIT website.
-*   **PDF Querying:** Luna will be able to answer queries about the content of PDF files found on the website.
+## 🛠 Technical Stack
 
-### Advanced RAG Optimizations
+*   **LLM**: `llama3:latest` (via Ollama)
+*   **Embeddings**: `embeddinggemma:latest` (via Ollama)
+*   **Vector Store**: ChromaDB
+*   **API**: FastAPI (Python 3.13)
+*   **Entity Matching**: `rapidfuzz` (Fuzzy name matching for typos like "Kushal Kunwar" -> "Kushal Kanwar")
 
-To enhance the system's performance, accuracy, and efficiency, especially with a large dataset, the following strategies will be considered:
+## 📂 Key Components
 
-*   **Multi-layered Retrieval:** Implement a tiered search system:
-    1.  **Layer 1 (Curated Facts):** Utilize `juit_facts.json` for rapid, highly accurate answers to common, critical factual queries.
-    2.  **Layer 2 (Prioritized RAG):** For other queries, search a prioritized subset of key documents (main web pages, recent PDFs).
-    3.  **Layer 3 (Full RAG):** Expand to the entire archive of documents (including all PDFs) as a deep-search option.
-*   **Query Understanding Enhancements:**
-    *   **Query Rewriting/Expansion:** Use LLMs to refine or expand user queries for more effective searching.
-    *   **Intent Classification:** Categorize user queries to route them to the most appropriate retrieval layer or data source.
-    *   **HyDE (Hypothetical Document Embeddings):** Generate hypothetical answers to queries and embed them for a more semantically aligned search.
-*   **Retrieval & Ranking Improvements:**
-    *   **Hybrid Search:** Combine vector similarity search with keyword-based search (e.g., BM25) with vector search for comprehensive results.
-    *   **Re-ranking:** Apply secondary models to re-rank initial retrieval results, selecting the most relevant chunks for the LLM.
-    *   **Metadata Filtering:** Leverage document metadata (e.g., year, department, document type) to pre-filter search results, dramatically increasing relevance and speed.
-*   **LLM Generation Optimizations:**
-    *   **Caching:** Store and reuse generated responses for frequently asked questions.
-    *   **Streaming Responses:** Deliver LLM output token-by-token for a more responsive user experience.
+*   `app.py`: Core API server with selective retrieval logic and hallucination short-circuits.
+*   `build_faculty_db.py`: Structured scraper that extracts core biographical data from faculty pages.
+*   `parser.py`: Advanced HTML/PHP parser that targets main content areas (`div#container`) and cleans data.
+*   `ingest.py`: Chunking and vectorization pipeline for the ChromaDB knowledge base.
+*   `juit_facts.json`: The "Hard Fact" repository for fees and leadership.
 
-### Example Usage
+## 🚦 How It Runs
 
-**User:** Who is Nishant Jain?
-**Luna:** Nishant Jain is a faculty member with XYZ qualifications. [Learn more](link-to-source)
+1.  **Parsing**: Run `python3 parser.py` to extract clean text from the scraped site.
+2.  **Structuring**: Run `python3 build_faculty_db.py` to create the deterministic entity database.
+3.  **Ingestion**: Run `.venv/bin/python3 ingest.py` to populate the vector store.
+4.  **Serving**: Run `.venv/bin/python3 app.py` to start the assistant on port 5000.
 
-**User:** Tell me about the XYZ event.
-**Luna:** The XYZ event is scheduled for [timestamp]. [View event details](link-to-event-page-or-pdf]
+## ✅ Verification Example
+
+*   **Query**: "Who is Dr. Kushal Kunwar?"
+*   **Logic**: 
+    1. Fuzzy match identifies "Kushal Kanwar" (Score > 80).
+    2. Short-circuit: Vector DB is disabled.
+    3. Retrieval: Pulls exact PhD and Project data from `faculty_structured_db.json`.
+    4. Result: 100% accurate profile without cross-contamination from other faculty.

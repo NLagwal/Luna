@@ -1,4 +1,28 @@
-juit_website/
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+.env
+
+# Logs
+*.log
+
+# Project specific
+chroma_data/
 PARSED_SHIT/
 diff/
-PARSED_SHIT.md
+www.juit.ac.in/
+juit_website/
+faculty_files.txt
+faculty_structured_db.json
+juit_facts.json
+
+# IDEs
+.vscode/
+.idea/
+
+# Tools
+.gemini/

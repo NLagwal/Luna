@@ -1,0 +1,11 @@
+langchain
+langchain-community
+langchain-chroma
+langchain-text-splitters
+chromadb
+ollama
+fastapi
+uvicorn
+beautifulsoup4
+pypdf
+pymupdf
