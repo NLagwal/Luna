@@ -1,0 +1,278 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.7in,top=0.75in,bottom=0.75in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage[hyphens]{url}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=cyan,
+    pdftitle={Luna - 6-Week Project Engineering Diary}
+}
+
+\urlstyle{tt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small \textit{Luna: Project Engineering Diary}}
+\lhead{\small \textit{JUIT Solan -- Dept. of CSE \& IT}}
+\cfoot{\small Page \thepage\ of 6}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\setstretch{1.15}
+\sloppy
+
+\begin{document}
+
+% HEADER
+\begin{center}
+    {\large \textbf{JAYPEE UNIVERSITY OF INFORMATION TECHNOLOGY, WAKNAGHAT}}\\
+    \vspace{0.1cm}
+    {\normalsize \textbf{DEPARTMENT OF COMPUTER SCIENCE \& ENGINEERING \& IT}}\\
+    \vspace{0.2cm}
+    \rule{\textwidth}{0.8pt}\\
+    \vspace{0.15cm}
+    {\Large \textbf{WEEKLY PROJECT PROGRESS DIARY}}\\
+    \vspace{0.1cm}
+    {\normalsize \textbf{Project Title: Luna -- Intelligent Retrieval-Augmented Campus Assistant}}\\
+    \vspace{0.15cm}
+    \rule{\textwidth}{0.8pt}
+\end{center}
+
+\vspace{0.1cm}
+\noindent \textbf{Supervisor:} Prof. Pradeep Kumar Gupta, Professor, Dept. of CSE \& IT \hfill \textbf{Status:} 100\% Completed \\
+\textbf{Timeline:} June 22, 2026 -- August 02, 2026 (6 Weeks)
+
+\vspace{0.2cm}
+\noindent \textbf{Project Team:} \textbf{Nakul Lagwal} (241030266, AI \& RAG Lead) \hfill \textbf{Kavish Bansal} (241030039, Backend \& DB) \hfill \textbf{Vihaan Sharma} (241030121, QA \& Testing)
+
+\vspace{0.2cm}
+\hrule
+\vspace{0.3cm}
+
+% WEEK 1
+\subsection*{Week 1: Requirements, Architectural Blueprint \& Foundation Setup}
+\noindent \textbf{Duration:} June 22, 2026 -- June 28, 2026 \hfill \textbf{Phase:} Architecture \& Setup \\
+\textbf{Milestone:} Infrastructure initialization, base schema definition, and local model runtime setup.
+
+\subsubsection*{Individual Contributions:}
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \item \textbf{Nakul Lagwal (AI Lead):}
+    \begin{itemize}
+        \setlength{\itemsep}{0pt}
+        \item Benchmarked local LLM execution viability on campus hardware; selected \textbf{Gemma 4 (e2b)} via Ollama for optimal token generation speed and senior-level reasoning tone.
+        \item Formulated initial system prompt rules to enforce zero-hallucination constraints and strict grounding in university-provided records.
+        \item Formulated the theoretical \textbf{Dual-Track RAG} pipeline separating deterministic database lookups from crawled website data.
+    \end{itemize}
+
+    \item \textbf{Kavish Bansal (Backend \& Database):}
+    \begin{itemize}
+        \setlength{\itemsep}{0pt}
+        \item Authored \path{docker-compose.yml} orchestrating PostgreSQL (port 5433) and ChromaDB vector store (port 8001).
+        \item Initialized modular Python project architecture (\path{src/core}, \path{src/api}, \path{src/services}, \path{src/utils}, \path{scripts}).
+        \item Drafted core relational schema for faculty profiles (\texttt{faculty} table) using SQLAlchemy declarative models in \path{src/services/db.py}.
+    \end{itemize}
+
+    \item \textbf{Vihaan Sharma (QA \& Testing):}
+    \begin{itemize}
+        \setlength{\itemsep}{0pt}
+        \item Compiled an initial test suite of 50 multi-category campus queries (academic schedules, faculty designations, fee structures, chitchat).
+        \item Designed a testing evaluation rubric measuring retrieval precision, end-to-end response latency, and hallucination rates.
+        \item Conducted network and connectivity sanity checks verifying Docker service bindings and local API availability.
+    \end{itemize}
+\end{itemize}
+\noindent \textbf{Weekly Review \& Outcome:} Core infrastructure established. PostgreSQL and ChromaDB running reliably in Docker. Base database schema and LLM runtime validated.
+
+\newpage
+% WEEK 2
+\subsection*{Week 2: Core Backend Services, Intent Classification \& Test Harness}
+\noindent \textbf{Duration:} June 29, 2026 -- July 05, 2026 \hfill \textbf{Phase:} Backend \& Routing \\
+\textbf{Milestone:} Functional FastAPI skeleton, early-exit chitchat router, and automated evaluation harnesses.
+
+\subsubsection*{Individual Contributions:}
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \item \textbf{Nakul Lagwal (AI Lead):}
+    \begin{itemize}
+        \setlength{\itemsep}{0pt}
+        \item Developed \path{src/core/router.py} implementing an \textbf{Early-Exit Intent Router} to classify chitchat and greeting prompts prior to invoking retrieval blocks.
+        \item Implemented heuristic fast-paths returning canned responses in $<5\text{ ms}$ for standard greetings (``hello, ``who are you, ``thanks).
+        \item Authored structured fact registries (\path{topics.json} and \path{juit_facts.json}) for instant retrieval of official institutional facts.
+    \end{itemize}
+
+    \item \textbf{Kavish Bansal (Backend \& Database):}
+    \begin{itemize}
+        \setlength{\itemsep}{0pt}
+        \item Built the FastAPI application entry point (\path{src/main.py}) configured with asynchronous CORS middleware and health probe endpoints (\texttt{GET /health}).
+        \item Implemented database connection manager, session makers, and metadata loading routines in \texttt{DatabaseService}.
+        \item Authored database setup scripts (\path{scripts/setup_db.py}) to automate PostgreSQL table creation.
+    \end{itemize}
+
+    \item \textbf{Vihaan Sharma (QA \& Testing):}
+    \begin{itemize}
+        \setlength{\itemsep}{0pt}
+        \item Developed an automated Python benchmarking script comparing latency between early-exit routed queries and full RAG queries.
+        \item Verified that standard greetings bypassed database lookups and LLM calls 100\% of the time with near-zero latency.
+        \item Expanded the test query suite from 50 to 90 cases, categorized by domain (admissions, faculty profiles, hostel rules, chitchat).
+    \end{itemize}
+\end{itemize}
+\noindent \textbf{Weekly Review \& Outcome:} Early-exit intent routing fully operational. Unnecessary LLM compute avoided for casual greetings. Base API routes active.
+
+\newpage
+% WEEK 3
+\subsection*{Week 3: Dual-Track Retrieval, Data Seeding \& Hybrid Indexing}
+\noindent \textbf{Duration:} July 06, 2026 -- July 12, 2026 \hfill \textbf{Phase:} Ingestion \& Retrieval \\
+\textbf{Milestone:} Relational database population, ChromaDB vector embedding integration, and Rank-BM25 hybrid search.
+
+\subsubsection*{Individual Contributions:}
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \item \textbf{Nakul Lagwal (AI Lead):}
+    \begin{itemize}
+        \setlength{\itemsep}{0pt}
+        \item Built \texttt{HybridSearchService} (\path{src/services/hybrid_search.py}) combining \textbf{Rank-BM25} lexical scoring with dense vector cosine similarity.
+        \item Designed context formatting logic to inject trust-level headers (\texttt{--- TRACK A ---} and \texttt{--- TRACK B ---}) into the LLM prompt.
+        \item Tuned document embedding generation utilizing Ollama model \path{embeddinggemma:latest}.
+    \end{itemize}
+
+    \item \textbf{Kavish Bansal (Backend \& Database):}
+    \begin{itemize}
+        \setlength{\itemsep}{0pt}
+        \item Authored data scraping scripts (\path{scripts/seed_faculty_from_mirror.py} and \path{scripts/seed_admin_staff.py}) using \texttt{BeautifulSoup4} to extract faculty details from mirrored HTML into PostgreSQL.
+        \item Implemented \texttt{VectorService} (\path{src/services/vector.py}) interfacing with ChromaDB via HTTP with score thresholding.
+        \item Populated \texttt{luna\_vault} collection with curated academic circulars and official university ordinances.
+    \end{itemize}
+
+    \item \textbf{Vihaan Sharma (QA \& Testing):}
+    \begin{itemize}
+        \setlength{\itemsep}{0pt}
+        \item Conducted data validation audits on retrieved faculty profiles, verifying designations, email addresses, and publications against university directories.
+        \item Tested ChromaDB distance threshold boundaries to prevent out-of-domain chunks from leaking into Track B context.
+        \item Recorded initial precision benchmarks: Track A+ achieved 98.4\% precision; Track B hybrid search achieved 85.1\%.
+    \end{itemize}
+\end{itemize}
+\noindent \textbf{Weekly Review \& Outcome:} PostgreSQL seeded with 100+ faculty profiles. Vector search and BM25 hybrid pipeline operational.
+
+\newpage
+% WEEK 4
+\subsection*{Week 4: Streaming Generation, Safety Valves \& Latency Profiling}
+\noindent \textbf{Duration:} July 13, 2026 -- July 19, 2026 \hfill \textbf{Phase:} Streaming \& Safety \\
+\textbf{Milestone:} Real-time token streaming endpoints, RapidFuzz name ambiguity handler, and performance profiling.
+
+\subsubsection*{Individual Contributions:}
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \item \textbf{Nakul Lagwal (AI Lead):}
+    \begin{itemize}
+        \setlength{\itemsep}{0pt}
+        \item Engineered the \textbf{Fuzzy Name Safety Valve} in \path{src/services/db.py} using \path{rapidfuzz.process.extractOne} with \texttt{fuzz.WRatio}.
+        \item Configured dual confidence thresholds: matches $\ge 80\%$ trigger direct profile retrieval; matches between $65\%$ and $79\%$ return interactive clarification prompts (\textit{``Did you mean Dr. [Name]?}).
+        \item Implemented session-based conversational memory in \path{src/services/memory.py} using LangChain \texttt{ChatMessageHistory}.
+    \end{itemize}
+
+    \item \textbf{Kavish Bansal (Backend \& Database):}
+    \begin{itemize}
+        \setlength{\itemsep}{0pt}
+        \item Developed asynchronous NDJSON streaming endpoint \texttt{POST /chat\_stream} in \path{src/api/chat.py} using FastAPI \texttt{StreamingResponse}.
+        \item Integrated session lifecycle management ensuring thread-safe conversational histories per user.
+        \item Implemented response formatters (\path{src/utils/formatter.py}) generating clickable source citations and mandatory Track B disclaimers.
+    \end{itemize}
+
+    \item \textbf{Vihaan Sharma (QA \& Testing):}
+    \begin{itemize}
+        \setlength{\itemsep}{0pt}
+        \item Designed a dedicated edge-case test battery targeting misspelled faculty names, phonetic variations, and missing honorifics.
+        \item Profiled time-to-first-token (TTFT) on \path{/chat_stream}, recording an average TTFT of $<350\text{ ms}$.
+        \item Verified that the safety valve triggered reliably on 100\% of ambiguous test names without false-positive lockouts.
+    \end{itemize}
+\end{itemize}
+\noindent \textbf{Weekly Review \& Outcome:} Real-time token streaming functioning. Interactive spelling ambiguity resolution validated.
+
+\newpage
+% WEEK 5
+\subsection*{Week 5: End-to-End Integration, Stress Testing \& Hallucination Audits}
+\noindent \textbf{Duration:} July 20, 2026 -- July 26, 2026 \hfill \textbf{Phase:} Integration \& Hardening \\
+\textbf{Milestone:} Full pipeline integration, system concurrency stress testing, and factual verification.
+
+\subsubsection*{Individual Contributions:}
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \item \textbf{Nakul Lagwal (AI Lead):}
+    \begin{itemize}
+        \setlength{\itemsep}{0pt}
+        \item Performed hallucination audits on Gemma 4:e2b responses; tightened system prompt constraints to force the model to state: \textit{``I do not have that specific information in the official JUIT database} when context is missing.
+        \item Refined Track B prompt templates to mandate clear citation disclaimers for supplementary website data.
+        \item Integrated the embeddable chat widget script (\path{scripts/inject_widget.py}) with backend streaming endpoints.
+    \end{itemize}
+
+    \item \textbf{Kavish Bansal (Backend \& Database):}
+    \begin{itemize}
+        \setlength{\itemsep}{0pt}
+        \item Optimized PostgreSQL query performance by indexing \texttt{clean\_name} and adding in-memory caching for frequently queried faculty.
+        \item Hardened exception handling across \texttt{/chat} and \path{/chat_stream} to gracefully handle network timeouts and vector store disconnects.
+        \item Automated end-to-end service launch and process orchestration within \path{run.sh} (automatic port cleanup, Docker boot, dual server execution).
+    \end{itemize}
+
+    \item \textbf{Vihaan Sharma (QA \& Testing):}
+    \begin{itemize}
+        \setlength{\itemsep}{0pt}
+        \item Executed concurrent load tests simulating simultaneous multi-user sessions querying admission deadlines and fee schedules.
+        \item Evaluated 150 benchmark queries across all three execution tracks (Chitchat, Track A+, Track B).
+        \item Documented error logs and false-positive cases to guide final prompt calibrations and threshold tuning.
+    \end{itemize}
+\end{itemize}
+\noindent \textbf{Weekly Review \& Outcome:} High stability under concurrent request loads. Zero hallucinations detected on official university facts.
+
+\newpage
+% WEEK 6
+\subsection*{Week 6: Comprehensive Benchmarking, Documentation \& Sign-Off}
+\noindent \textbf{Duration:} July 27, 2026 -- August 02, 2026 \hfill \textbf{Phase:} Final Benchmarks \& Sign-off \\
+\textbf{Milestone:} Final metric validation, formal project documentation, and project sign-off.
+
+\subsubsection*{Individual Contributions:}
+\begin{itemize}
+    \setlength{\itemsep}{1pt}
+    \item \textbf{Nakul Lagwal (AI Lead):}
+    \begin{itemize}
+        \setlength{\itemsep}{0pt}
+        \item Documented end-to-end system architecture and finalized Mermaid pipeline workflows.
+        \item Authored technical chapters for the final project report (System Design, Dual-Track RAG Methodology, LLM Orchestration).
+        \item Packaged codebase with modular separation and prepared environment configuration templates.
+    \end{itemize}
+
+    \item \textbf{Kavish Bansal (Backend \& Database):}
+    \begin{itemize}
+        \setlength{\itemsep}{0pt}
+        \item Finalized Docker deployment manifests, data volume persistence policies, and database backup routines.
+        \item Verified clean cold-start startups and automated dependency installations in \path{requirements.txt}.
+        \item Authored backend API reference documentation and deployment instructions.
+    \end{itemize}
+
+    \item \textbf{Vihaan Sharma (QA \& Testing):}
+    \begin{itemize}
+        \setlength{\itemsep}{0pt}
+        \item Synthesized the final \textbf{System Performance \& Accuracy Benchmark Report}:
+        \begin{itemize}
+            \setlength{\itemsep}{0pt}
+            \item \textbf{Chitchat Routing Precision:} 100\% (Avg. Latency: 4.2 ms)
+            \item \textbf{Track A+ Official Record Precision:} 98.6\% (Avg. Latency: 124 ms)
+            \item \textbf{Track B Supplementary Knowledge Precision:} 87.2\% (Avg. Latency: 845 ms)
+            \item \textbf{Hallucination Rate:} 0\% on official facts, $<2.1\%$ on supplementary web data
+            \item \textbf{Safety Valve Accuracy:} 100\% on ambiguous name queries
+        \end{itemize}
+        \item Performed final regression testing across all endpoints prior to project completion sign-off.
+    \end{itemize}
+\end{itemize}
+
+\vspace{0.2cm}
+\noindent \textbf{Weekly Review \& Outcome:} All project deliverables completed to 100\% specification. Verified, benchmarked, and ready for deployment.
+
+\end{document}

@@ -1,8 +1,10 @@
 import os
+from src.core.config import settings
 
 # Directories to inject into
-TARGET_DIR = "/home/lag/Projekt/Luna/www.juit.ac.in"
+TARGET_DIR = os.path.join(settings.ROOT_DIR, "www.juit.ac.in")
 WIDGET_SCRIPT = "<script src=\"/luna-widget/luna-widget.js\"></script>"
+
 
 def inject_script(file_path):
     try:

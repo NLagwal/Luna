@@ -1,0 +1,97 @@
+{
+  "fee structure": {
+    "text": "For the 2026-27 session, JUIT fees are: B.Tech (1,64,550 INR/sem), BBA/BCA (82,550 INR/sem), M.Tech (74,850 INR/sem), MBA (1,62,500 INR/sem), M.Sc (52,300 INR/sem), and Ph.D (32,450 INR/sem).",
+    "verbose": "The detailed fee structure for the Academic Year 2026-27 is as follows:\n- B.Tech (All Courses): 1,64,550 INR per semester for the first year, increasing to 1,90,550 INR by the fourth year.\n- BBA & BCA: 82,550 INR per semester for the first year.\n- B.Sc (Forensic Science): 70,000 INR per semester for the first year.\n- M.Tech: 74,850 INR per semester.\n- MBA: 1,62,500 INR per semester.\n- M.Sc: 52,300 INR per semester.\n- Ph.D: 32,450 INR per semester.\n\nAdditional Charges:\n- Caution Money: 20,000 INR (One-time, Refundable).\n- Admission Charges: B.Tech (25,000 INR), BBA/M.Tech/MBA (15,000 INR), BCA/B.Sc/M.Sc (10,000 INR).\n- Hostel Charges: 84,000 INR per semester (Double occupancy); 8,000 INR extra for single occupancy.\n- Consessions: 30% for wards of Armed/PMF personnel; 35% for wards of Veer Naris/PWD.",
+    "ref": "https://www.juit.ac.in/fee-detail-2026-indian-students"
+  },
+  "placements": {
+    "text": "JUIT has a strong placement record with a 50 LPA highest package (Google) and 7.18 LPA mean salary for the 2021-25 batch.",
+    "verbose": "Placement Status for JUIT Solan 2021-25 (as of Feb 13, 2026):\n- Highest Salary: 50 LPA (Google)\n- 2nd Highest: 46.38 LPA (Amazon)\n- 3rd Highest: 29.5 LPA (Amazon)\n- 4th Highest: 19.5 LPA (Zscaler)\n- 5th Highest: 18 LPA (AtomicWork)\n- Mean Salary: 7.18 LPA\n- Median Salary: 6 LPA\nKey Recruiters include Amazon, Google, Zscaler, Infosys, Wipro, Cognizant, Ericsson, ZS Associates, NTT Data, and Yamaha Motor Solutions. Placements for the 2025 batch are currently ongoing.",
+    "ref": "https://www.juit.ac.in/placement2021-2025"
+  },
+  "recruiters": {
+    "text": "Key recruiters at JUIT include Google, Amazon, Zscaler, Infosys, Wipro, Cognizant, Ericsson, and many more.",
+    "verbose": "JUIT's major recruiters across various industries are:\n- Tech/Software: Google, Amazon, Zscaler, Infosys, Wipro, Cognizant, Nineleaps, Zycus, Kuliza, Kony Labs.\n- Electronics/Comm: Ericsson, Gemalto, NTT Data, FICO.\n- Others: Yamaha Motor Solutions, ZS Associates, Genpact, Decision Point, Root Analysis, DarwinBox, Nference, Click Labs, TT Consultants.",
+    "ref": "https://www.juit.ac.in/placement2021-2025"
+  },
+  "courses": {
+    "text": "JUIT offers various programs including B.Tech, BCA, BBA, B.Sc, M.Tech, M.Sc, MBA, and Ph.D.",
+    "verbose": "Jaypee University of Information Technology offers a wide range of academic programs for the 2026-27 session:\n- Undergraduate: B.Tech (JEE & 10+2 Based), B.Tech (Lateral Entry), BCA, BBA, and B.Sc.\n- Postgraduate: M.Tech, M.Sc, and MBA.\n- Doctoral: Ph.D. programs are available in various disciplines like CSE, ECE, Biotechnology, Civil Engineering, Physics, Mathematics, and HSS.",
+    "ref": "https://www.juit.ac.in/Programs-on-Offer"
+  },
+  "rankings": {
+    "text": "JUIT is ranked 201-300 among Engineering Institutes in India by NIRF 2025.",
+    "verbose": "JUIT has achieved significant recognition in recent rankings:\n- NIRF 2025 (MHRD): Ranked in the 201-300 band among Engineering Institutes in India.\n- IIC Rating 2023-24: Received a 3.5-star rating for Institution's Innovation Council activities.\n- B.Tech Biotechnology: Program holds NBA Accreditation from 2024 to 2027.",
+    "ref": "https://www.juit.ac.in/rankings-and-recognitions"
+  },
+  "faculty count": {
+    "text": "JUIT Solan has a total faculty strength of over 150+ members across all academic departments.",
+    "verbose": "Jaypee University of Information Technology maintains a robust faculty-student ratio with over 150+ highly qualified faculty members. This includes distinguished professors, associate professors, and assistant professors across departments like CSE, IT, ECE, Civil, BT/BI, Physics, Mathematics, and HSS.",
+    "ref": "https://www.juit.ac.in/staff"
+  },
+  "chancellor": {
+    "text": "Sh. Manoj Gaur is the Chancellor of Jaypee University of Information Technology.",
+    "verbose": "Sh. Manoj Gaur serves as the Chancellor of JUIT Solan. He is the Executive Chairman of the Jaypee Group and a visionary leader in the field of infrastructure and education.",
+    "ref": "https://www.juit.ac.in/authorities"
+  },
+  "vice chancellor": {
+    "text": "Prof. (Dr.) Rajendra Kumar Sharma has been the Vice Chancellor of JUIT since August 2021.",
+    "verbose": "Prof. (Dr.) Rajendra Kumar Sharma is the current Vice Chancellor of JUIT Solan. He is an accomplished academic leader with over three decades of experience, holds a PhD from IIT Roorkee, and previously held leadership roles at Thapar Institute (TIET), Patiala. He succeeded Prof. Vinod Kumar.",
+    "ref": "https://www.juit.ac.in/authorities"
+  },
+  "registrar": {
+    "text": "Brigadier RK Sharma, SM (Retd.) is the Registrar and Dean of Students at JUIT.",
+    "verbose": "Brigadier RK Sharma, SM (Retd.) is the Registrar and Dean of Students at JUIT Solan. He was commissioned in the Corps of Engineers in 1988 and succeeded Maj Gen Rakesh Bassi, SM (Retd.).",
+    "ref": "https://www.juit.ac.in/authorities"
+  },
+  "dean academics": {
+    "text": "Prof. (Dr.) Shruti Jain is the Dean (Academics) and a Professor in the ECE department.",
+    "verbose": "Prof. (Dr.) Shruti Jain is the Dean (Academics) at JUIT Solan. She is also a Professor in the Department of Electronics and Communication Engineering. She has over 20 years of teaching experience and has been recognized among the top 2% of scientists globally by Stanford University.",
+    "ref": "https://www.juit.ac.in/faculty.php?id=155&dep=ece&page=0"
+  },
+  "dean students welfare": {
+    "text": "Prof. Dr. Rakesh Kumar Bajaj is the Dean of Students Welfare (DOSW).",
+    "verbose": "Prof. Dr. Rakesh Kumar Bajaj serves as the Dean of Students Welfare (DOSW) and is also the Head of the Department of Mathematics. He has over two decades of experience in higher education and research.",
+    "ref": "https://www.juit.ac.in/faculty.php?id=138&dep=maths&page=0"
+  },
+  "dean innovation": {
+    "text": "Prof. (Dr.) Tiratha Raj Singh is the Associate Dean (Innovation).",
+    "verbose": "Prof. (Dr.) Tiratha Raj Singh is the Associate Dean (Innovation) at JUIT Solan. He is also a Professor in the Department of Biotechnology and Bioinformatics, Media In-charge, and Coordinator of the Centre of Healthcare Technologies and Informatics (CEHTI).",
+    "ref": "https://www.juit.ac.in/faculty.php?id=108&dep=bio&page=0"
+  },
+  "registrar office": {
+    "text": "The Registrar Office manages academic administration, HR, and general university division.",
+    "verbose": "Key contacts in the Registrar Office:\n- Assistant Registrar (Academics): Mr. Sanjay Kumar Verma (+91 01792 239362)\n- Personal Assistant to Registrar: Mr. Atul Sharma (+91 01792 239377)\n- HR Head: Mr. M. R. Zinta (+91 01792 239320)\n- Admin. Coordinators: Mr. Amit Kumar Shrivastava, Mr. Chaman Lal.",
+    "ref": "https://www.juit.ac.in/staff"
+  },
+  "finance and accounts": {
+    "text": "The Finance and Accounts department is led by CFO Sh. Hemant Vyas.",
+    "verbose": "Key contacts in Finance and Accounts:\n- Chief Finance Officer: Sh. Hemant Vyas (+91 01792239370)\n- Finance Officer: Sh. Govind Nath Jha (+91 01792239367)\n- Asstt. Finance Officers: Sh. Ravinder Singh Dogra, Sh. Sanjay Bhatt, Sh. Manish Sharma.",
+    "ref": "https://www.juit.ac.in/staff"
+  },
+  "it infrastructure": {
+    "text": "IT Infrastructure is managed by a team of consultants including Mr. Sanjay Jain and Mr. Ajay Nigam.",
+    "verbose": "Key IT Infrastructure Staff:\n- Principal Consultant: Mr. Sanjay Jain (+91 01792-239244)\n- Sr. Consultant: Mr. Ajay Nigam (+91 01792-239244)\n- Consultants: Mr. Pardeep Singh, Mr. Ashutosh Verma, Mr. Ashish Tyagi, Mr. Mahender Lal Sharma.",
+    "ref": "https://www.juit.ac.in/staff"
+  },
+  "establishment": {
+    "text": "JUIT was established in 2002 by the Act of the Himachal Pradesh State Legislature.",
+    "verbose": "The university was established in 2002 under Act No. 14 of 2002 as a private university. It was set up in collaboration between the Jaiprakash Sewa Sansthan and the Government of Himachal Pradesh. It was the first private university in Himachal Pradesh to be accredited by NAAC.",
+    "ref": "https://www.juit.ac.in/overview"
+  },
+  "location": {
+    "text": "JUIT is located at Waknaghat, Solan, Himachal Pradesh.",
+    "verbose": "The university is situated on the lush green hills of Waknaghat, P.O. Waknaghat, Teh. Kandaghat, Distt. Solan - 173 234 (H.P.), India. It is approximately 25 km from Shimla and 85 km from Chandigarh.",
+    "ref": "https://www.juit.ac.in/contact/location"
+  },
+  "admissions": {
+    "text": "Admission for the 2026-27 session is currently open for various courses.",
+    "verbose": "Admission to JUIT for the 2026-27 academic year is open. Modes of entry include JEE Rank and 10+2 Merit for B.Tech programs. The university also offers B.Tech (Lateral Entry), and admissions for BCA, BBA, B.Sc, M.Sc, M.Tech, MBA, and Ph.D. are based on specific entrance criteria or merit.",
+    "ref": "https://www.juit.ac.in/juit-admissions"
+  },
+  "pkg": {
+    "text": "Prof. (Dr.) Pradeep Kumar Gupta (widely known as PKG or Dr. P.K. Gupta) is a Professor in the Department of Computer Science & Engineering (Core Computing Group) at JUIT.",
+    "verbose": "Prof. (Dr.) Pradeep Kumar Gupta has over 23 years of academic and research experience. He holds a Post Doctorate from the University of Pretoria and received his Ph.D. in CSE from JUIT in 2013. His significant work and contributions include: over 105 SCOPUS-indexed research publications with an h-index of 23; authoring 2 books with Springer and editing more than 20 international volumes; pioneering research in Internet-of-Things (IoT), Artificial Intelligence, Cloud Computing, Vehicular Networks, and Fog Computing; securing research grants totaling over 40 Lakhs INR from DST India and HIMCOSTE; 4 patents (1 granted); recipient of the 2024 Dr. Sarvapalli Radhakrishnan Distinguished Researcher & Professor Award; supervision of 7 Ph.D. scholars and 13 M.Tech students. (Note: Inquiries for 'Pankaj Kumar Gupta' or 'PKG' refer to Prof. Pradeep Kumar Gupta).",
+    "ref": "https://www.juit.ac.in/faculty.php?id=467&dep=cse&page=0"
+  }
+}

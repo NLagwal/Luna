@@ -3,10 +3,24 @@ services:
     image: chromadb/chroma:latest
     container_name: chromadb
     ports:
-      - "8001:8000"
+      - "8002:8000"
+
     volumes:
       - ./chroma_data:/chroma/chroma
     environment:
       - IS_PERSISTENT=TRUE
       - ANONYMIZED_TELEMETRY=FALSE
+    restart: always
+
+  postgres:
+    image: postgres:17
+    container_name: luna_postgres
+    environment:
+      POSTGRES_USER: luna_user
+      POSTGRES_PASSWORD: luna_password
+      POSTGRES_DB: luna_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
     restart: always

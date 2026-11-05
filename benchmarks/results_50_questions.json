@@ -1,0 +1,721 @@
+{
+  "overall_accuracy": 100.0,
+  "passed": 50,
+  "failed": 0,
+  "avg_latency": 0.022392826080322267,
+  "category_stats": {
+    "Fee Structure": {
+      "total": 5,
+      "passed": 5
+    },
+    "Charges & Concessions": {
+      "total": 5,
+      "passed": 5
+    },
+    "Placements": {
+      "total": 6,
+      "passed": 6
+    },
+    "Leadership": {
+      "total": 5,
+      "passed": 5
+    },
+    "Deans & Academic Heads": {
+      "total": 5,
+      "passed": 5
+    },
+    "Staff & Administration": {
+      "total": 5,
+      "passed": 5
+    },
+    "Rankings": {
+      "total": 4,
+      "passed": 4
+    },
+    "History & Campus": {
+      "total": 5,
+      "passed": 5
+    },
+    "Admissions & Programs": {
+      "total": 3,
+      "passed": 3
+    },
+    "Faculty Profile": {
+      "total": 2,
+      "passed": 2
+    },
+    "Conversational": {
+      "total": 3,
+      "passed": 3
+    },
+    "Collision Resilience": {
+      "total": 1,
+      "passed": 1
+    },
+    "Negative Safety / Guardrails": {
+      "total": 1,
+      "passed": 1
+    }
+  },
+  "detailed_results": [
+    {
+      "id": 1,
+      "category": "Fee Structure",
+      "question": "What is the B.Tech first year fee per semester at JUIT?",
+      "expected": "1,64,550 INR/sem",
+      "response": "The B.Tech tuition fee for the first year at Jaypee University of Information Technology (JUIT) is **1,64,550 INR per semester** for the 2026-27 academic session. \n\nPlease note that additional one-time charges (such as Caution Money of 20,000 INR and Admission Charges of 25,000 INR) as well as hostel charges (if applicable) are charged separately.\n\nSources:\n- https://www.juit.ac.in/fee-detail-2026-indian-students\n- https://www.juit.ac.in/faculty.php?id=70&dep=physics&page=0\n- https://www.juit.ac.in/attachments/Weareheretohelpyou.pdf\n",
+      "status": "PASS",
+      "latency": 0.55,
+      "citations": [
+        "https://www.juit.ac.in/fee-detail-2026-indian-students",
+        "https://www.juit.ac.in/faculty.php?id=70&dep=physics&page=0",
+        "https://www.juit.ac.in/attachments/Weareheretohelpyou.pdf"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 2,
+      "category": "Fee Structure",
+      "question": "What is the semester fee for BCA and BBA courses?",
+      "expected": "82,550 INR/sem",
+      "response": "For the 2026-27 academic year, the fee structure for BBA and BCA courses is as follows:\n\n* **Tuition / Semester Fee (First Year):** 82,550 INR per semester (for both BBA and BCA)\n* **One-Time Admission Charges:** \n  * **BBA:** 15,000 INR\n  * **BCA:** 10,000 INR\n* **Caution Money (One-time, Refundable):** 20,000 INR\n\nSources:\n- https://www.juit.ac.in/fee-detail-2026-indian-students\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/fee-detail-2026-indian-students"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 3,
+      "category": "Fee Structure",
+      "question": "How much does the M.Tech program cost per semester at JUIT?",
+      "expected": "74,850 INR/sem",
+      "response": "For the 2026-27 academic session, the tuition fee for the M.Tech program at JUIT is **74,850 INR per semester**. \n\nPlease note that additional standard charges, such as a one-time refundable caution money deposit of 20,000 INR and an admission charge of 15,000 INR, apply as per university regulations.\n\nSources:\n- https://www.juit.ac.in/fee-detail-2026-indian-students\n- https://www.juit.ac.in/staff\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/fee-detail-2026-indian-students",
+        "https://www.juit.ac.in/staff"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 4,
+      "category": "Fee Structure",
+      "question": "What is the tuition fee per semester for MBA students?",
+      "expected": "1,62,500 INR/sem",
+      "response": "For the 2026-27 academic session, the tuition fee for MBA students is **1,62,500 INR per semester**.\n\nSources:\n- https://www.juit.ac.in/fee-detail-2026-indian-students\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/fee-detail-2026-indian-students"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 5,
+      "category": "Fee Structure",
+      "question": "What is the semester fee for Ph.D scholars at JUIT?",
+      "expected": "32,450 INR/sem",
+      "response": "The semester fee for Ph.D scholars at JUIT for the 2026-27 academic session is **32,450 INR per semester**.\n\nSources:\n- https://www.juit.ac.in/fee-detail-2026-indian-students\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/fee-detail-2026-indian-students"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 6,
+      "category": "Charges & Concessions",
+      "question": "What is the refundable caution money amount at JUIT?",
+      "expected": "20,000 INR",
+      "response": "The refundable caution money amount at JUIT is 20,000 INR (One-time).\n\nSources:\n- https://www.juit.ac.in/fee-detail-2026-indian-students\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/fee-detail-2026-indian-students"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 7,
+      "category": "Charges & Concessions",
+      "question": "How much are the one-time admission charges for B.Tech students?",
+      "expected": "25,000 INR",
+      "response": "The one-time admission charges for B.Tech students at JUIT are **25,000 INR**.\n\nSources:\n- https://www.juit.ac.in/fee-detail-2026-indian-students\n- https://www.juit.ac.in/faculty.php?id=70&dep=physics&page=0\n- https://www.juit.ac.in/attachments/Weareheretohelpyou.pdf\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/fee-detail-2026-indian-students",
+        "https://www.juit.ac.in/faculty.php?id=70&dep=physics&page=0",
+        "https://www.juit.ac.in/attachments/Weareheretohelpyou.pdf"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 8,
+      "category": "Charges & Concessions",
+      "question": "What are the hostel charges per semester for double occupancy?",
+      "expected": "84,000 INR",
+      "response": "The hostel charges for double occupancy at JUIT Solan are 84,000 INR per semester.\n\nSources:\n- https://www.juit.ac.in/fee-detail-2026-indian-students\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/fee-detail-2026-indian-students"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 9,
+      "category": "Charges & Concessions",
+      "question": "How much extra is charged per semester for a single occupancy hostel room?",
+      "expected": "8,000 INR",
+      "response": "An extra charge of 8,000 INR per semester is applicable for single occupancy hostel accommodation.\n\nSources:\n- https://www.juit.ac.in/fee-detail-2026-indian-students\n- https://www.juit.ac.in/faculty.php?id=446&dep=physics&page=0\n- https://www.juit.ac.in/attachments/Weareheretohelpyou.pdf\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/fee-detail-2026-indian-students",
+        "https://www.juit.ac.in/faculty.php?id=446&dep=physics&page=0",
+        "https://www.juit.ac.in/attachments/Weareheretohelpyou.pdf"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 10,
+      "category": "Charges & Concessions",
+      "question": "What fee concession is provided to wards of Armed and Paramilitary personnel?",
+      "expected": "30%",
+      "response": "Wards of Armed and Paramilitary (PMF) personnel are provided with a **30% fee concession**.\n\nSources:\n- https://www.juit.ac.in/fee-detail-2026-indian-students\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/fee-detail-2026-indian-students"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 11,
+      "category": "Placements",
+      "question": "What was the highest package offered to the 2021-25 batch?",
+      "expected": "50 LPA",
+      "response": "The highest package offered to the 2021-25 batch at JUIT Solan was 50 LPA by Google.\n\nSources:\n- https://www.juit.ac.in/placement2021-2025\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/placement2021-2025"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 12,
+      "category": "Placements",
+      "question": "Which company offered the highest package of 50 LPA at JUIT?",
+      "expected": "Google",
+      "response": "Google offered the highest package of 50 LPA at JUIT for the 2021-25 batch.\n\nSources:\n- https://www.juit.ac.in/placement2021-2025\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/placement2021-2025"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 13,
+      "category": "Placements",
+      "question": "What was the second highest salary offered to the 2021-25 batch and by whom?",
+      "expected": "46.38 LPA by Amazon",
+      "response": "The second highest salary offered to the 2021-25 batch was 46.38 LPA, offered by Amazon.\n\nSources:\n- https://www.juit.ac.in/placement2021-2025\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/placement2021-2025"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 14,
+      "category": "Placements",
+      "question": "What is the average or mean placement salary for the 2021-25 batch?",
+      "expected": "7.18 LPA",
+      "response": "The mean (average) placement salary for the 2021-25 batch at JUIT Solan is **7.18 LPA**.\n\nSources:\n- https://www.juit.ac.in/placement2021-2025\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/placement2021-2025"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 15,
+      "category": "Placements",
+      "question": "What is the median salary for the 2021-25 batch?",
+      "expected": "6 LPA",
+      "response": "The median salary for the 2021-25 batch at JUIT Solan is **6 LPA**.\n\nSources:\n- https://www.juit.ac.in/placement2021-2025\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/placement2021-2025"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 16,
+      "category": "Placements",
+      "question": "Name some of the key recruiters that hire from JUIT.",
+      "expected": "Google, Amazon, Zscaler, Infosys, Wipro, Cognizant",
+      "response": "Key recruiters that hire from JUIT across various industries include:\n\n* **Tech/Software:** Google, Amazon, Zscaler, Infosys, Wipro, Cognizant, Nineleaps, Zycus, Kuliza, and Kony Labs.\n* **Electronics & Communications:** Ericsson, Gemalto, NTT Data, and FICO.\n* **Other Sectors:** Yamaha Motor Solutions, ZS Associates, Genpact, Decision Point, Root Analysis, DarwinBox, Nference, Click Labs, and TT Consultants.\n\nSources:\n- https://www.juit.ac.in/placement2021-2025\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/placement2021-2025"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 17,
+      "category": "Leadership",
+      "question": "Who is the Chancellor of Jaypee University of Information Technology?",
+      "expected": "Sh. Manoj Gaur",
+      "response": "The Chancellor of Jaypee University of Information Technology (JUIT) Solan is Sh. Manoj Gaur. He also serves as the Executive Chairman of the Jaypee Group.\n\nSources:\n- https://www.juit.ac.in/authorities\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/authorities"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 18,
+      "category": "Leadership",
+      "question": "Who is the Vice Chancellor of JUIT Solan?",
+      "expected": "Prof. (Dr.) Rajendra Kumar Sharma",
+      "response": "The Vice Chancellor of JUIT Solan is Prof. (Dr.) Rajendra Kumar Sharma. He has been serving in this role since August 2021, succeeding Prof. Vinod Kumar. He is an accomplished academic leader with over three decades of experience, holds a PhD from IIT Roorkee, and previously held leadership positions at Thapar Institute (TIET), Patiala.\n\nSources:\n- https://www.juit.ac.in/authorities\n",
+      "status": "PASS",
+      "latency": 0.02,
+      "citations": [
+        "https://www.juit.ac.in/authorities"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 19,
+      "category": "Leadership",
+      "question": "From which institute did the Vice Chancellor Prof. Rajendra Kumar Sharma complete his PhD?",
+      "expected": "IIT Roorkee",
+      "response": "Prof. (Dr.) Rajendra Kumar Sharma completed his PhD from IIT Roorkee.\n\nSources:\n- https://www.juit.ac.in/authorities\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/authorities",
+        "https://www.juit.ac.in/authorities"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 20,
+      "category": "Leadership",
+      "question": "Who was the predecessor of Vice Chancellor Prof. Rajendra Kumar Sharma?",
+      "expected": "Prof. Vinod Kumar",
+      "response": "The predecessor of Vice Chancellor Prof. (Dr.) Rajendra Kumar Sharma was Prof. Vinod Kumar.\n\nSources:\n- https://www.juit.ac.in/authorities\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/authorities",
+        "https://www.juit.ac.in/authorities"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 21,
+      "category": "Leadership",
+      "question": "Who is the Registrar and Dean of Students at JUIT?",
+      "expected": "Brigadier RK Sharma, SM (Retd.)",
+      "response": "Brigadier RK Sharma, SM (Retd.) is the Registrar and Dean of Students at JUIT Solan.\n\nSources:\n- https://www.juit.ac.in/authorities\n",
+      "status": "PASS",
+      "latency": 0.03,
+      "citations": [
+        "https://www.juit.ac.in/authorities"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 22,
+      "category": "Deans & Academic Heads",
+      "question": "Who is the Dean (Academics) at JUIT Solan?",
+      "expected": "Prof. (Dr.) Shruti Jain",
+      "response": "The Dean (Academics) at JUIT Solan is Prof. (Dr.) Shruti Jain. She is also a Professor in the Department of Electronics and Communication Engineering.\n\nSources:\n- https://www.juit.ac.in/faculty.php?id=155&dep=ece&page=0\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/faculty.php?id=155&dep=ece&page=0"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 23,
+      "category": "Deans & Academic Heads",
+      "question": "Which department does the Dean Academics Prof. Shruti Jain belong to?",
+      "expected": "ECE (Electronics and Communication Engineering)",
+      "response": "Prof. (Dr.) Shruti Jain belongs to the Department of Electronics and Communication Engineering (ECE).\n\nSources:\n- https://www.juit.ac.in/faculty.php?id=155&dep=ece&page=0\n- https://www.juit.ac.in/attachments/Weareheretohelpyou.pdf\n",
+      "status": "PASS",
+      "latency": 0.02,
+      "citations": [
+        "https://www.juit.ac.in/faculty.php?id=155&dep=ece&page=0",
+        "https://www.juit.ac.in/faculty.php?id=155&dep=ece&page=0",
+        "https://www.juit.ac.in/attachments/Weareheretohelpyou.pdf"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 24,
+      "category": "Deans & Academic Heads",
+      "question": "Who is the Dean of Students Welfare (DOSW) at JUIT?",
+      "expected": "Prof. Dr. Rakesh Kumar Bajaj",
+      "response": "The Dean of Students Welfare (DOSW) at JUIT is Prof. Dr. Rakesh Kumar Bajaj. He also serves as the Head of the Department of Mathematics.\n\nSources:\n- https://www.juit.ac.in/faculty.php?id=138&dep=maths&page=0\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/faculty.php?id=138&dep=maths&page=0"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 25,
+      "category": "Deans & Academic Heads",
+      "question": "Which academic department is headed by Prof. Rakesh Kumar Bajaj?",
+      "expected": "Department of Mathematics",
+      "response": "Prof. Dr. Rakesh Kumar Bajaj serves as the Head of the **Department of Mathematics** at JUIT, Waknaghat.\n\nSources:\n- https://www.juit.ac.in/faculty.php?id=138&dep=maths&page=0\n- https://www.juit.ac.in/attachments/Weareheretohelpyou.pdf\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/faculty.php?id=138&dep=maths&page=0",
+        "https://www.juit.ac.in/attachments/Weareheretohelpyou.pdf"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 26,
+      "category": "Deans & Academic Heads",
+      "question": "Who is the Associate Dean (Innovation) at JUIT?",
+      "expected": "Prof. (Dr.) Tiratha Raj Singh",
+      "response": "Prof. (Dr.) Tiratha Raj Singh is the Associate Dean (Innovation) at JUIT Solan. He also serves as a Professor in the Department of Biotechnology and Bioinformatics, Media In-charge, and Coordinator of the Centre of Healthcare Technologies and Informatics (CEHTI).\n\nSources:\n- https://www.juit.ac.in/faculty.php?id=108&dep=bio&page=0\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/faculty.php?id=108&dep=bio&page=0"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 27,
+      "category": "Staff & Administration",
+      "question": "Who is the Assistant Registrar (Academics) in the Registrar Office?",
+      "expected": "Mr. Sanjay Kumar Verma",
+      "response": "The Assistant Registrar (Academics) in the Registrar Office is Mr. Sanjay Kumar Verma (Contact: +91 01792 239362).\n\nSources:\n- https://www.juit.ac.in/staff\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/staff"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 28,
+      "category": "Staff & Administration",
+      "question": "Who is the Chief Finance Officer (CFO) of JUIT?",
+      "expected": "Sh. Hemant Vyas",
+      "response": "The Chief Finance Officer (CFO) of JUIT is **Sh. Hemant Vyas**. \n\nContact Details:\n* **Phone:** +91 01792239370\n\nSources:\n- https://www.juit.ac.in/staff\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/staff",
+        "https://www.juit.ac.in/staff"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 29,
+      "category": "Staff & Administration",
+      "question": "Who heads the Human Resources (HR) department at JUIT?",
+      "expected": "Mr. M. R. Zinta",
+      "response": "The Human Resources (HR) department at JUIT is headed by **Mr. M. R. Zinta** (Contact: +91 01792 239320).\n\nSources:\n- https://www.juit.ac.in/staff\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/staff"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 30,
+      "category": "Staff & Administration",
+      "question": "Who is the Principal Consultant for IT Infrastructure at JUIT?",
+      "expected": "Mr. Sanjay Jain",
+      "response": "The Principal Consultant for IT Infrastructure at JUIT is Mr. Sanjay Jain (+91 01792-239244).\n\nSources:\n- https://www.juit.ac.in/staff\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/staff"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 31,
+      "category": "Staff & Administration",
+      "question": "What is the total faculty strength across departments at JUIT Solan?",
+      "expected": "Over 150+ members",
+      "response": "The total faculty strength at JUIT Solan is over 150+ highly qualified members across all academic departments. This includes distinguished professors, associate professors, and assistant professors serving across departments such as CSE, IT, ECE, Civil Engineering, BT/BI, Physics, Mathematics, and Humanities & Social Sciences (HSS).\n\nSources:\n- https://www.juit.ac.in/staff\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/staff"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 32,
+      "category": "Rankings",
+      "question": "What is the NIRF 2025 ranking band of JUIT in Engineering?",
+      "expected": "201-300 band",
+      "response": "According to the official university records, JUIT is ranked in the **201-300 band** among Engineering Institutes in India by NIRF 2025.\n\nSources:\n- https://www.juit.ac.in/rankings-and-recognitions\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/rankings-and-recognitions"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 33,
+      "category": "Rankings",
+      "question": "What star rating was awarded to JUIT by the Institution's Innovation Council (IIC) for 2023-24?",
+      "expected": "3.5-star rating",
+      "response": "JUIT was awarded a **3.5-star rating** by the Institution's Innovation Council (IIC) for the 2023-24 period.\n\nSources:\n- https://www.juit.ac.in/rankings-and-recognitions\n",
+      "status": "PASS",
+      "latency": 0.02,
+      "citations": [
+        "https://www.juit.ac.in/rankings-and-recognitions"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 34,
+      "category": "Rankings",
+      "question": "Which engineering program holds NBA accreditation from 2024 to 2027 at JUIT?",
+      "expected": "B.Tech Biotechnology",
+      "response": "The B.Tech Biotechnology program holds NBA Accreditation from 2024 to 2027 at JUIT.\n\nSources:\n- https://www.juit.ac.in/rankings-and-recognitions\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/rankings-and-recognitions"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 35,
+      "category": "Rankings",
+      "question": "Which was the first private university in Himachal Pradesh accredited by NAAC?",
+      "expected": "JUIT (Jaypee University of Information Technology)",
+      "response": "Jaypee University of Information Technology (JUIT) was the first private university in Himachal Pradesh to be accredited by NAAC.\n\nSources:\n- https://www.juit.ac.in/overview\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/overview"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 36,
+      "category": "History & Campus",
+      "question": "In which year was JUIT established?",
+      "expected": "2002",
+      "response": "JUIT was established in the year 2002 under Act No. 14 of 2002 by the Himachal Pradesh State Legislature.\n\nSources:\n- https://www.juit.ac.in/overview\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/overview"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 37,
+      "category": "History & Campus",
+      "question": "Under which Act of the Himachal Pradesh Legislature was JUIT established?",
+      "expected": "Act No. 14 of 2002",
+      "response": "JUIT was established under **Act No. 14 of 2002** of the Himachal Pradesh State Legislature.\n\nSources:\n- https://www.juit.ac.in/overview\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/overview"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 38,
+      "category": "History & Campus",
+      "question": "Which entity partnered with the Himachal Pradesh Government to establish JUIT?",
+      "expected": "Jaiprakash Sewa Sansthan",
+      "response": "The entity that partnered with the Government of Himachal Pradesh to establish JUIT is the **Jaiprakash Sewa Sansthan**.\n\nSources:\n- https://www.juit.ac.in/overview\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/overview"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 39,
+      "category": "History & Campus",
+      "question": "Where is JUIT campus located?",
+      "expected": "Waknaghat, Solan, Himachal Pradesh",
+      "response": "The JUIT campus is located on the lush green hills of Waknaghat, P.O. Waknaghat, Tehsil Kandaghat, District Solan - 173 234, Himachal Pradesh, India. It is situated approximately 25 km from Shimla and 85 km from Chandigarh.\n\nSources:\n- https://www.juit.ac.in/contact/location\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/contact/location"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 40,
+      "category": "History & Campus",
+      "question": "What is the distance of JUIT from Shimla and Chandigarh?",
+      "expected": "25 km from Shimla, 85 km from Chandigarh",
+      "response": "JUIT is located approximately 25 km from Shimla and 85 km from Chandigarh.\n\nSources:\n- https://www.juit.ac.in/contact/location\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/contact/location"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 41,
+      "category": "Admissions & Programs",
+      "question": "What are the modes of admission for B.Tech programs at JUIT?",
+      "expected": "JEE Rank and 10+2 Merit",
+      "response": "The modes of admission for B.Tech programs at JUIT for the 2026-27 academic year include:\n\n* **JEE Rank**\n* **10+2 Merit**\n\nAdditionally, the university offers **B.Tech (Lateral Entry)**.\n\nSources:\n- https://www.juit.ac.in/juit-admissions\n- https://www.juit.ac.in/faculty.php?id=70&dep=physics&page=0\n- https://www.juit.ac.in/attachments/Weareheretohelpyou.pdf\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/juit-admissions",
+        "https://www.juit.ac.in/faculty.php?id=70&dep=physics&page=0",
+        "https://www.juit.ac.in/attachments/Weareheretohelpyou.pdf"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 42,
+      "category": "Admissions & Programs",
+      "question": "Does JUIT offer lateral entry admission to B.Tech programs?",
+      "expected": "Yes, B.Tech (Lateral Entry) is offered",
+      "response": "Yes, JUIT offers B.Tech (Lateral Entry) programs under its undergraduate academic offerings for the 2026-27 session.\n\nSources:\n- https://www.juit.ac.in/Programs-on-Offer\n- https://www.juit.ac.in/faculty.php?id=70&dep=physics&page=0\n- https://www.juit.ac.in/attachments/Weareheretohelpyou.pdf\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/Programs-on-Offer",
+        "https://www.juit.ac.in/faculty.php?id=70&dep=physics&page=0",
+        "https://www.juit.ac.in/attachments/Weareheretohelpyou.pdf"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 43,
+      "category": "Admissions & Programs",
+      "question": "Which postgraduate programs are offered at JUIT?",
+      "expected": "M.Tech, M.Sc, and MBA",
+      "response": "Based on the official JUIT records, the postgraduate programs offered at JUIT for the 2026-27 session are:\n\n* **M.Tech**\n* **M.Sc**\n* **MBA**\n\nSources:\n- https://www.juit.ac.in/Programs-on-Offer\n",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/Programs-on-Offer"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 44,
+      "category": "Faculty Profile",
+      "question": "Tell me about Prof. Shruti Jain's scientific recognition.",
+      "expected": "Top 2% scientists globally by Stanford University",
+      "response": "Prof. Dr. Shruti Jain's scientific recognitions and achievements include:\n\n* **Global Ranking:** Enlisted among the **top 2% of scientists in the world** in the rankings for 2021, 2023, 2024, and 2025 published by Elsevier, based on data compiled by Stanford University.\n* **Academic Highest Degree:** Awarded the **Doctor of Science (D.Sc.)** in Electronics and Communication Engineering.\n* **Awards:** Recipient of the **Nation Builder Award** in 2018\u201319.\n* **Professional Memberships & Leadership:** \n  * Senior Member of IEEE\n  * Joint Secretary of the IEEE Delhi Section\n  * Subcommittee Member of IEEE India Council WIE\n  * Life Member and Executive Member of the Biomedical Engineering Society of India\n  * Member of IAENG\n* **Editorial & Academic Service:** Serves on the editorial boards of numerous reputed journals, acts as a reviewer for various international publications, and sits on Technical Program Committees (TPCs) for different conferences.\n\nSources:\n- https://www.juit.ac.in/faculty.php?id=155&dep=ece&page=0\n- https://www.juit.ac.in/attachments/Weareheretohelpyou.pdf\n",
+      "status": "PASS",
+      "latency": 0.02,
+      "citations": [
+        "https://www.juit.ac.in/faculty.php?id=155&dep=ece&page=0",
+        "https://www.juit.ac.in/attachments/Weareheretohelpyou.pdf"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 45,
+      "category": "Faculty Profile",
+      "question": "Who is Prof. Dr. Hemant Sood at JUIT?",
+      "expected": "Professor in Biotechnology and Bioinformatics",
+      "response": "Prof. Dr. Hemant Sood is a Professor at Jaypee University of Information Technology (JUIT) specializing in Plant Biotechnology (Plant tissue culture and *in vitro* production of phytochemicals) and Intellectual Property Rights.\n\n**Key Highlights:**\n* **Contact:** hemant.sood@juit.ac.in\n* **Research & Achievements:** Focuses on micropropagation technologies for plant species (having developed protocols for 16 species), production of phytopharmaceuticals, and sharing technology with farmers for socio-economic improvement.\n* **Patents & Innovations:** Holds 3 Indian granted patents, 1 international patent (Republic of South Africa), and a granted design application for a \"Phytoreactor.\"\n* **Awards & Recognition:** Nominated by CII among 125 women luminaries in STEM; recipient of the Dr. Sarvepalli Radhakrishnan Distinguished Associate Professor & Researcher Award 2023 in Plant Biotechnology, MASHAV International Scholarship (Israel), and the Indian Science Congress Young Scientist Award (2011).\n* **Proposed Project Topics:** Micropropagation of Endangered and Elite Plants, Production of Bioactive Phytochemicals by Cell and Tissue Culture, and Propagation of Medicinal Plants/Herbs in Hydroponics systems.\n\nSources:\n- https://www.juit.ac.in/faculty.php?id=117\n- https://www.juit.ac.in/attachments/Weareheretohelpyou.pdf\n",
+      "status": "PASS",
+      "latency": 0.03,
+      "citations": [
+        "https://www.juit.ac.in/faculty.php?id=117",
+        "https://www.juit.ac.in/attachments/Weareheretohelpyou.pdf"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": 46,
+      "category": "Conversational",
+      "question": "hello!",
+      "expected": "Chitchat greeting",
+      "response": "Hello! I am Luna, your JUIT AI assistant. How can I help you today?",
+      "status": "PASS",
+      "latency": 0.0,
+      "citations": [],
+      "trust_level": "A"
+    },
+    {
+      "id": 47,
+      "category": "Conversational",
+      "question": "who are you?",
+      "expected": "Luna official assistant identity",
+      "response": "I am Luna, the official senior AI assistant for Jaypee University of Information Technology (JUIT). I can help you with faculty profiles, admission details, fee structures, and more.",
+      "status": "PASS",
+      "latency": 0.0,
+      "citations": [],
+      "trust_level": "A"
+    },
+    {
+      "id": 48,
+      "category": "Conversational",
+      "question": "thank you!",
+      "expected": "Welcome message",
+      "response": "You're welcome! Feel free to ask if you have more questions.",
+      "status": "PASS",
+      "latency": 0.0,
+      "citations": [],
+      "trust_level": "A"
+    },
+    {
+      "id": 49,
+      "category": "Collision Resilience",
+      "question": "Can I give feedback on my hostel experience?",
+      "expected": "Must NOT return fee structure",
+      "response": "I do not have that specific information in the official JUIT database.",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [],
+      "trust_level": "A"
+    },
+    {
+      "id": 50,
+      "category": "Negative Safety / Guardrails",
+      "question": "What is the secret recipe of Coca-Cola?",
+      "expected": "Refusal / missing information statement",
+      "response": "I do not have that specific information in the official JUIT database.",
+      "status": "PASS",
+      "latency": 0.01,
+      "citations": [],
+      "trust_level": "A"
+    }
+  ]
+}

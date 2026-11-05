@@ -1,49 +1,119 @@
-# LUNA: Precision AI Assistant for JUIT Solan
+# Luna - Intelligent Campus Assistant
 
-LUNA is a high-accuracy, RAG-powered AI assistant specifically engineered for the Jaypee University of Information Technology (JUIT) website. Unlike standard RAG systems, LUNA uses a dual-track retrieval architecture to eliminate hallucinations and ensure deterministic correctness for university data.
+Official enterprise conversational AI assistant for **Jaypee University of Information Technology (JUIT)**, Waknaghat, Solan, H.P. Built on a high-precision, bifurcated Dual-Track Retrieval-Augmented Generation (RAG) architecture.
 
-## 🚀 Actual Architecture
+---
 
-LUNA operates on a **Selective Retrieval Strategy** that chooses the best data source based on query intent:
+## 🏛️ System Architecture
 
-### 1. Deterministic Knowledge Track (100% Accuracy)
-*   **Structured Faculty DB (`faculty_structured_db.json`)**: Contains cleaned, parsed profiles for 100+ faculty members (Biography, Research, Projects).
-*   **Hard Facts DB (`juit_facts.json`)**: Stores "Ground Truth" data for fees (2026-27), university leadership (VC, Registrar), and establishment details.
-*   **Hallucination Protection**: When a person or hard fact is identified, LUNA **short-circuits** the Vector DB. This prevents "data leakage" where details from one professor might accidentally mix into another's biography.
+Luna decouples statutory university data from probabilistic web search using a **Bifurcated Dual-Track Retrieval** strategy:
 
-### 2. Semantic RAG Track (Deep Context)
-*   **Vector Database**: ChromaDB (running in Docker) storing 28,000+ text chunks from the entire JUIT website and high-utility PDFs.
-*   **Content Filtering**: Custom parser (`parser.py`) that strips navigation noise and filters out 404 pages, login forms, and junk content.
-*   **Semantic Search**: Uses `embeddinggemma:latest` to find relevant information for general queries (e.g., "What is the policy on X?").
+* **Track A+ (Deterministic Ground Truth):**
+  * **Fact Registry (`data/topics.json`, `data/juit_facts.json`):** Deterministic keyword-to-fact mapping with regex word-boundary matching and length-descending keyword priority.
+  * **PostgreSQL Faculty & Staff Directory:** High-accuracy relational database with RapidFuzz `WRatio` matching, anchored name sanitization, and ambiguity safety gating.
+* **Track B (Probabilistic Semantic Search):**
+  * **ChromaDB Dense Vector Search:** Vector similarity retrieval ($dist \le 1.5$).
+  * **Rank-BM25 Lexical Ranking:** Okapi BM25 keyword matching with local HTML mirror cold-start fallback.
+  * **Trust Degradation Disclaimer:** Automatic confidence disclaimer on supplementary documents.
+* **API Gateway & Client:**
+  * Asynchronous FastAPI backend with NDJSON chunked streaming (`/chat_stream`) and conversational memory TTL pruning.
+  * Zero-dependency embedded frontend widget (`luna-widget/luna-widget.js`) with DOM XSS escaping and per-user session isolation.
 
-## 🛠 Technical Stack
+---
 
-*   **LLM**: `llama3:latest` (via Ollama)
-*   **Embeddings**: `embeddinggemma:latest` (via Ollama)
-*   **Vector Store**: ChromaDB
-*   **API**: FastAPI (Python 3.13)
-*   **Entity Matching**: `rapidfuzz` (Fuzzy name matching for typos like "Kushal Kunwar" -> "Kushal Kanwar")
+## 📁 Repository Directory Structure
 
-## 📂 Key Components
+```
+Luna/
+├── docker-compose.yml       # Microservices orchestration (PostgreSQL 17, ChromaDB)
+├── run.sh                   # Main application launch script with health checks
+├── requirements.txt         # Python package dependencies
+├── README.md                # Project documentation and developer guide
+├── .gitignore               # Git ignore rules
+│
+├── src/                     # Core backend application
+│   ├── main.py              # FastAPI application entrypoint & startup lifecycle
+│   ├── config.py            # Global configuration settings & environment vars
+│   ├── api/                 # API routes (/chat, /chat_stream, /health)
+│   ├── core/                # Business logic (Punctuation-agnostic IntentRouter)
+│   ├── models/              # SQLAlchemy and Pydantic data models
+│   └── services/            # Core services (Database, HybridSearch, LLM, Memory)
+│
+├── luna-widget/             # Embedded client chat widget
+│   └── luna-widget.js       # Vanilla JS widget with DOM XSS sanitization
+│
+├── data/                    # Authoritative facts and registry mappings
+│   ├── juit_facts.json      # Official university statutory facts
+│   └── topics.json          # Keyword-to-fact topic index
+│
+├── reports/                 # Academic papers, technical specifications & PDFs
+│   ├── Luna_Architecture_Document.pdf # 12-page compiled system architecture report
+│   ├── Luna_Architecture_Document.tex # Complete LaTeX source
+│   ├── Luna_Project_Diary.pdf         # 6-week engineering progress diary
+│   ├── Luna_Project_Report.pdf        # Formal semester project report
+│   └── PROJECT_DIARY.md               # Markdown engineering diary
+│
+├── benchmarks/              # Empirical evaluation suites & test logs
+│   ├── results_50_questions.json      # 50/50 benchmark test results (100% pass)
+│   └── benchmark_results.json         # Evaluation run metrics and latencies
+│
+├── scripts/                 # Utility scripts, data seeders, and evaluation tools
+│   ├── generate_architecture_pdf.py   # Compiles architecture PDF to reports/
+│   ├── test_50_questions.py           # Automated 50-question benchmark runner
+│   ├── seed_faculty_from_mirror.py    # Scrapes & cleans faculty metadata
+│   ├── seed_admin_staff.py            # Seeds administrative officers
+│   └── setup_db.py                    # Initializes database tables
+│
+├── docs/                    # Architecture diagrams, specifications & design notes
+│   ├── system_architecture.png        # High-level architecture topology diagram
+│   └── documentation.md               # Additional architectural notes
+│
+├── logs/                    # Application and server logs (gitignored)
+└── archive/                 # Historical diffs, scratch tools, and legacy tests
+```
 
-*   `app.py`: Core API server with selective retrieval logic and hallucination short-circuits.
-*   `build_faculty_db.py`: Structured scraper that extracts core biographical data from faculty pages.
-*   `parser.py`: Advanced HTML/PHP parser that targets main content areas (`div#container`) and cleans data.
-*   `ingest.py`: Chunking and vectorization pipeline for the ChromaDB knowledge base.
-*   `juit_facts.json`: The "Hard Fact" repository for fees and leadership.
+---
 
-## 🚦 How It Runs
+## 🚀 Quickstart Guide
 
-1.  **Parsing**: Run `python3 parser.py` to extract clean text from the scraped site.
-2.  **Structuring**: Run `python3 build_faculty_db.py` to create the deterministic entity database.
-3.  **Ingestion**: Run `.venv/bin/python3 ingest.py` to populate the vector store.
-4.  **Serving**: Run `.venv/bin/python3 app.py` to start the assistant on port 5000.
+### 1. Start Infrastructure
+```bash
+docker compose up -d
+```
 
-## ✅ Verification Example
+### 2. Install Dependencies
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
 
-*   **Query**: "Who is Dr. Kushal Kunwar?"
-*   **Logic**: 
-    1. Fuzzy match identifies "Kushal Kanwar" (Score > 80).
-    2. Short-circuit: Vector DB is disabled.
-    3. Retrieval: Pulls exact PhD and Project data from `faculty_structured_db.json`.
-    4. Result: 100% accurate profile without cross-contamination from other faculty.
+### 3. Initialize Database & Seed Records
+```bash
+python -m scripts.setup_db
+python -m scripts.seed_faculty_from_mirror
+python -m scripts.seed_admin_staff
+```
+
+### 4. Launch Full Stack
+```bash
+./run.sh
+```
+* **Backend API:** `http://localhost:5000/health`
+* **Mirrored Web Site with Widget:** `http://localhost:8000/www.juit.ac.in/index.html`
+
+---
+
+## 🧪 Running Benchmarks & Compiling Reports
+
+* **Run 50-Question Benchmark Suite:**
+  ```bash
+  python -m scripts.test_50_questions
+  ```
+  Results will be saved in `benchmarks/results_50_questions.json`.
+
+* **Recompile Architecture PDF:**
+  ```bash
+  python scripts/generate_architecture_pdf.py
+  ```
+  Compiled PDF will be output directly to `reports/Luna_Architecture_Document.pdf`.

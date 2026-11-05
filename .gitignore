@@ -9,20 +9,31 @@ ENV/
 
 # Logs
 *.log
+logs/
+wget-log
 
 # Project specific
 chroma_data/
+postgres_data/
+archive/
 PARSED_SHIT/
 diff/
 www.juit.ac.in/
 juit_website/
 faculty_files.txt
 faculty_structured_db.json
-juit_facts.json
+
+# LaTeX & Build artifacts
+*.aux
+*.out
+*.toc
 
 # IDEs
 .vscode/
 .idea/
+.obsidian/
 
 # Tools
 .gemini/
+.codex
+.pytest_cache/

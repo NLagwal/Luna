@@ -113,27 +113,248 @@
 
 .luna-msg-luna {
     background: var(--luna-white);
-    color: #333;
+    color: #222;
     align-self: flex-start;
     border-bottom-left-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px solid #e8ecf1;
 }
 
-.luna-citation-box {
-    margin-top: 8px;
-    padding-top: 8px;
-    border-top: 1px solid #eee;
-    font-size: 11px;
+/* Markdown Typography & Blocks */
+.luna-line {
+    margin-bottom: 3px;
+    word-break: break-word;
 }
 
-.luna-citation-link {
+.luna-line-break {
+    height: 8px;
+}
+
+.luna-h1 {
+    font-size: 16px;
+    font-weight: 700;
     color: var(--juit-navy);
-    text-decoration: none;
-    background: #eef2f7;
+    margin: 10px 0 6px 0;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #e5e9f0;
+}
+
+.luna-h2 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--juit-navy);
+    margin: 8px 0 4px 0;
+}
+
+.luna-h3 {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--juit-navy);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin: 6px 0 3px 0;
+}
+
+.luna-bullet-item {
+    display: flex;
+    align-items: flex-start;
+    margin: 3px 0;
+    line-height: 1.45;
+}
+
+.luna-bullet-dot {
+    color: var(--juit-orange);
+    font-size: 16px;
+    line-height: 1;
+    margin-right: 8px;
+    user-select: none;
+}
+
+.luna-bullet-content {
+    flex: 1;
+    word-break: break-word;
+}
+
+.luna-bullet-indent {
+    margin-left: 16px;
+}
+
+.luna-num-item {
+    display: flex;
+    align-items: flex-start;
+    margin: 3px 0;
+    line-height: 1.45;
+}
+
+.luna-num-idx {
+    color: var(--juit-navy);
+    font-weight: 700;
+    font-size: 13px;
+    margin-right: 6px;
+    min-width: 18px;
+    user-select: none;
+}
+
+.luna-num-content {
+    flex: 1;
+    word-break: break-word;
+}
+
+.luna-blockquote {
+    border-left: 3px solid var(--juit-orange);
+    background: #f8fafc;
+    padding: 6px 12px;
+    margin: 6px 0;
+    font-style: italic;
+    color: #4a5568;
+    border-radius: 0 6px 6px 0;
+}
+
+.luna-hr {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    margin: 8px 0;
+}
+
+.luna-inline-code {
+    background: #edf2f7;
+    color: #c53030;
     padding: 2px 6px;
     border-radius: 4px;
-    margin-right: 4px;
-    display: inline-block;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 12.5px;
+}
+
+.luna-code-block {
+    background: #1a202c;
+    color: #f7fafc;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 12px;
+    overflow-x: auto;
+    margin: 6px 0;
+}
+
+.luna-link {
+    color: var(--juit-navy);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    word-break: break-all;
+    transition: color 0.15s;
+}
+
+.luna-link:hover {
+    color: var(--juit-orange);
+}
+
+/* Footer: Trust Badge and Citations */
+.luna-msg-footer {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid #edf2f7;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.luna-trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10.5px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 12px;
+    width: fit-content;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.luna-trust-a {
+    background: #e6f9ed;
+    color: #0e623b;
+    border: 1px solid #b7ebc6;
+}
+
+.luna-trust-b {
+    background: #fff8e6;
+    color: #8c6200;
+    border: 1px solid #ffe399;
+}
+
+.luna-badge-icon {
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.luna-citations-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 2px;
+}
+
+.luna-citations-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.luna-citations-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.luna-citation-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #f1f5f9;
+    color: var(--juit-navy);
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.luna-citation-pill:hover {
+    background: #e2e8f0;
+    border-color: var(--juit-navy);
+    color: #002244;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0, 51, 102, 0.15);
+}
+
+.luna-pill-icon {
+    font-size: 12px;
+    line-height: 1;
+}
+
+.luna-pill-label {
+    max-width: 220px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.luna-pill-arrow {
+    font-size: 10px;
+    color: #64748b;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.luna-citation-pill:hover .luna-pill-arrow {
+    color: var(--juit-orange);
+    transform: translate(1px, -1px);
 }
 
 #luna-chat-input-area {

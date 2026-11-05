@@ -1,0 +1,141 @@
+{
+  "accuracy": 100.0,
+  "total": 10,
+  "passed": 10,
+  "avg_latency": 0.011823701858520507,
+  "details": [
+    {
+      "id": "Q1",
+      "category": "Fee Structure",
+      "question": "What is the B.Tech 1st year fee per semester at JUIT?",
+      "expected": "1,64,550, sem",
+      "answer_snippet": "For the 2026-27 academic session, the tuition fee for the 1st year of B.Tech (All Courses) at JUIT is 1,64,550 INR per semester.   Please no",
+      "status": "PASS",
+      "latency_sec": 0.02,
+      "citations": [
+        "https://www.juit.ac.in/fee-detail-2026-indian-students",
+        "https://www.juit.ac.in/faculty.php?id=70&dep=physics&page=0",
+        "https://www.juit.ac.in/attachments/Weareheretohelpyou.pdf"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": "Q2",
+      "category": "Placements",
+      "question": "What is the highest placement package for the 2021-25 batch and which company offered it?",
+      "expected": "50 LPA, Google",
+      "answer_snippet": "The highest placement package for the 2021-25 batch is **50 LPA**, which was offered by **Google**.  Sources: - https://www.juit.ac.in/place",
+      "status": "PASS",
+      "latency_sec": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/placement2021-2025"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": "Q3",
+      "category": "Placements",
+      "question": "What is the mean/average salary for the 2021-25 batch at JUIT?",
+      "expected": "7.18 LPA",
+      "answer_snippet": "The mean (average) salary for the 2021-25 batch at JUIT is **7.18 LPA** (as of February 13, 2026).  Sources: - https://www.juit.ac.in/placem",
+      "status": "PASS",
+      "latency_sec": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/placement2021-2025"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": "Q4",
+      "category": "Leadership",
+      "question": "Who is the Vice Chancellor of Jaypee University of Information Technology?",
+      "expected": "Rajendra Kumar Sharma",
+      "answer_snippet": "Prof. (Dr.) Rajendra Kumar Sharma is the Vice Chancellor of Jaypee University of Information Technology (JUIT), Solan, serving in this role ",
+      "status": "PASS",
+      "latency_sec": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/authorities"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": "Q5",
+      "category": "Administration",
+      "question": "Who is the Registrar and Dean of Students at JUIT?",
+      "expected": "Brigadier RK Sharma, SM (Retd.)",
+      "answer_snippet": "Brigadier RK Sharma, SM (Retd.) is the Registrar and Dean of Students at JUIT Solan.  Sources: - https://www.juit.ac.in/authorities ",
+      "status": "PASS",
+      "latency_sec": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/authorities"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": "Q6",
+      "category": "Academics Leadership",
+      "question": "Who is the Dean (Academics) at JUIT Solan?",
+      "expected": "Prof. (Dr.) Shruti Jain, ECE",
+      "answer_snippet": "The Dean (Academics) at JUIT Solan is Prof. (Dr.) Shruti Jain. She is also a Professor in the Department of Electronics and Communication En",
+      "status": "PASS",
+      "latency_sec": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/faculty.php?id=155&dep=ece&page=0"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": "Q7",
+      "category": "Rankings",
+      "question": "What is the NIRF ranking of JUIT?",
+      "expected": "201-300, Engineering, NIRF 2025",
+      "answer_snippet": "Jaypee University of Information Technology (JUIT) is ranked in the **201\u2013300 band** among Engineering Institutes in India by NIRF 2025 (MHR",
+      "status": "PASS",
+      "latency_sec": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/rankings-and-recognitions"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": "Q8",
+      "category": "Establishment & History",
+      "question": "When was JUIT established and by which act?",
+      "expected": "2002, Himachal Pradesh State Legislature",
+      "answer_snippet": "JUIT was established in 2002 under Act No. 14 of 2002 of the Himachal Pradesh State Legislature.  Sources: - https://www.juit.ac.in/overview",
+      "status": "PASS",
+      "latency_sec": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/overview"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": "Q9",
+      "category": "Faculty Profile",
+      "question": "Tell me about Dr. Rakesh Kumar Bajaj and his administrative role.",
+      "expected": "Dean of Students Welfare, Mathematics",
+      "answer_snippet": "Prof. Dr. Rakesh Kumar Bajaj serves in key administrative leadership capacities at JUIT as the **Head of the Department of Mathematics** and",
+      "status": "PASS",
+      "latency_sec": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/faculty.php?id=138&dep=maths&page=0",
+        "https://www.juit.ac.in/attachments/Weareheretohelpyou.pdf"
+      ],
+      "trust_level": "A"
+    },
+    {
+      "id": "Q10",
+      "category": "Student Welfare / Hostel",
+      "question": "What are the hostel charges per semester for double occupancy?",
+      "expected": "84,000 INR, Double occupancy",
+      "answer_snippet": "The hostel charges for double occupancy at JUIT Solan are 84,000 INR per semester.  Sources: - https://www.juit.ac.in/fee-detail-2026-indian",
+      "status": "PASS",
+      "latency_sec": 0.01,
+      "citations": [
+        "https://www.juit.ac.in/fee-detail-2026-indian-students"
+      ],
+      "trust_level": "A"
+    }
+  ]
+}
